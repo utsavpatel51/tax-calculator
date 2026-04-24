@@ -6,8 +6,8 @@ export const viewport = {
 };
 
 export const metadata = {
-	metadataBase: new URL("https://tax-calculator.vercel.app"),
-	title: "India Salary & Tax Calculator FY 2025-26 | Old vs New Regime",
+	metadataBase: new URL("https://indian-tax-tool.vercel.app"),
+	title: "India Salary & Tax Calculator FY 2025-26",
 	description:
 		"Indian income tax calculator for FY 2025-26. Compare Old vs New regime, estimate in-hand salary, HRA exemption, 80C, 80D, marginal relief u/s 87A — all in one place.",
 	keywords: [
@@ -22,6 +22,7 @@ export const metadata = {
 		"new tax regime calculator",
 	],
 	authors: [{ name: "Utsav Patel" }],
+	icons: { icon: "/favicon.svg" },
 	robots: { index: true, follow: true },
 	openGraph: {
 		title: "India Salary & Tax Calculator FY 2025-26",
@@ -29,12 +30,14 @@ export const metadata = {
 			"Compare Old vs New tax regime, estimate in-hand salary, HRA exemption, and all deductions for FY 2025-26.",
 		type: "website",
 		locale: "en_IN",
+		images: [{ url: "/og-image.png", width: 1200, height: 630 }],
 	},
 	twitter: {
-		card: "summary",
+		card: "summary_large_image",
 		title: "India Salary & Tax Calculator FY 2025-26",
 		description:
 			"Quickly find your in-hand salary and compare Old vs New tax regime for FY 2025-26.",
+		images: ["/og-image.png"],
 	},
 };
 
