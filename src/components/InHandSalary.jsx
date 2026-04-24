@@ -15,21 +15,21 @@ function RegimeBreakdown({ label, basePay, empPF, corpNPSDeduction, regime }) {
 					<span className="v">{fmt(monthlyBase)}</span>
 				</li>
 				<li>
-					<span className="k">− Employee PF</span>
+					<span className="k">- Employee PF</span>
 					<span className="v">-{fmt(monthlyPF)}</span>
 				</li>
 				{corpNPSDeduction > 0 && (
 					<li>
-						<span className="k">− Corp NPS (restructured)</span>
+						<span className="k">- Corp NPS (restructured)</span>
 						<span className="v">-{fmt(monthlyNPS)}</span>
 					</li>
 				)}
 				<li>
-					<span className="k">− Prof. Tax</span>
+					<span className="k">- Prof. Tax</span>
 					<span className="v">-{fmt(PROFESSIONAL_TAX_MONTHLY)}</span>
 				</li>
 				<li>
-					<span className="k">− Income Tax</span>
+					<span className="k">- Income Tax</span>
 					<span className="v">-{fmt(monthlyTax)}</span>
 				</li>
 				<li className="final-row">
@@ -83,9 +83,8 @@ export default function InHandSalary({
 				</div>
 			</div>
 			<div className="info-note">
-				In-hand = Base Pay − Employee PF − Prof. Tax (₹200/mo) −
-				Income Tax. Prof. Tax varies by state; ₹200/mo is the most
-				common slab.
+				In-hand = Base Pay - Employee PF - Prof. Tax (₹200/mo) - Income
+				Tax. Prof. Tax varies by state; ₹200/mo is the most common slab.
 			</div>
 		</div>
 	);

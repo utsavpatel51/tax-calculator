@@ -9,12 +9,12 @@ function HRABreakdown({ r }) {
 		},
 		{
 			key: "cap",
-			label: `${(r.hraCapPct * 100).toFixed(0)}% × Basic (${r.isMetro ? "metro" : "non-metro"})`,
+			label: `${(r.hraCapPct * 100).toFixed(0)}% * Basic (${r.isMetro ? "metro" : "non-metro"})`,
 			value: r.hraRuleCityCap,
 		},
 		{
 			key: "rent",
-			label: `Rent ${fmt(r.annualRent)} − 10% × Basic`,
+			label: `Rent (${fmt(r.annualRent)}) - 10% * Basic (${fmt(r.basic * 0.1)})`,
 			value: r.hraRuleRent,
 		},
 	];
@@ -28,10 +28,7 @@ function HRABreakdown({ r }) {
 					const isChosen =
 						Math.round(rule.value) === Math.round(minValue);
 					return (
-						<li
-							key={rule.key}
-							className={isChosen ? "chosen" : ""}
-						>
+						<li key={rule.key} className={isChosen ? "chosen" : ""}>
 							<span className="rule-mark">
 								{isChosen ? "✓" : `${i + 1}.`}
 							</span>
@@ -69,9 +66,7 @@ export default function SalaryStructure({ inputs, r }) {
 					<span className="v">{fmt(r.basic)}</span>
 				</li>
 				<li>
-					<span className="k">
-						HRA ({inputs.hraPct}% of basic)
-					</span>
+					<span className="k">HRA ({inputs.hraPct}% of basic)</span>
 					<span className="v">{fmt(r.hra)}</span>
 				</li>
 				{r.otherTaxable > 0 && (
