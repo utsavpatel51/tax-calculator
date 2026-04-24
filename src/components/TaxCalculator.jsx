@@ -67,7 +67,24 @@ export default function TaxCalculator() {
 				authorised tax advisor.
 			</div>
 			<div className="footer">
-				FY 2025-26 tax rules · Educational tool only
+				FY 2025-26 tax rules · Educational tool only ·{" "}
+				<a
+					href="https://github.com/utsavpatel51/tax-calculator"
+					target="_blank"
+					rel="noopener noreferrer"
+					style={{ color: "inherit" }}
+				>
+					GitHub
+				</a>{" "}
+				·{" "}
+				<a
+					href="https://www.linkedin.com/in/utsavpatel51"
+					target="_blank"
+					rel="noopener noreferrer"
+					style={{ color: "inherit" }}
+				>
+					LinkedIn
+				</a>
 			</div>
 		</div>
 	);
